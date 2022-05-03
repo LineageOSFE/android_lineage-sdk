@@ -1680,6 +1680,16 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 2);
+        
+         /**
+         * Whether the brightness slider position is on top or bottom.
+         * 0 = Top, 1 = Bottom
+         */
+        public static final String QS_BRIGHTNESS_SLIDER_POSITION = "qs_brightness_slider_position";
+
+        /** @hide */
+        public static final Validator QS_BRIGHTNESS_SLIDER_POSITION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 1);
 
         /**
          * Whether to control brightness from status bar
@@ -2112,6 +2122,7 @@ public final class LineageSettings {
                 LineageSettings.System.SHOW_ALARM_ICON,
                 LineageSettings.System.STATUS_BAR_IME_SWITCHER,
                 LineageSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
+                LineageSettings.System.QS_BRIGHTNESS_SLIDER_POSITION,
                 LineageSettings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                 LineageSettings.System.VOLBTN_MUSIC_CONTROLS,
                 LineageSettings.System.USE_EDGE_SERVICE_FOR_GESTURES,
@@ -2253,6 +2264,7 @@ public final class LineageSettings {
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
+            VALIDATORS.put(QS_BRIGHTNESS_SLIDER_POSITION, QS_BRIGHTNESS_SLIDER_POSITION_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
             VALIDATORS.put(VOLBTN_MUSIC_CONTROLS, VOLBTN_MUSIC_CONTROLS_VALIDATOR);
@@ -2757,6 +2769,12 @@ public final class LineageSettings {
         public static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
 
         /**
+        * Whether the brightness slider position is on top or bottom.
+        * 0 = Top, 1 = Bottom
+        */
+        public static final String QS_BRIGHTNESS_SLIDER_POSITION = "qs_brightness_slider_position";
+
+        /**
          * Whether to show the auto brightness icon in quick settings panel.
          * @hide
          */
@@ -3004,6 +3022,7 @@ public final class LineageSettings {
                 LineageSettings.Secure.POWER_MENU_ACTIONS,
                 LineageSettings.Secure.STATS_COLLECTION,
                 LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
+                LineageSettings.Secure.QS_BRIGHTNESS_SLIDER_POSITION,
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[0],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],
